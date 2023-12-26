@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Keller Auditorium",
+    "address": "222 SW Clay St, Portland, OR 97201",
+    "lat": 45.5165,
+    "lng": -122.6819
+  },
+  {
+    "name": "Hotel 1",
+    "address": "1355 SW 2nd Ave, Portland, OR 97201",
+    "lat": 45.513741,
+    "lng": -122.6772
+  }
+]

@@ -1,0 +1,127 @@
+---
+import Layout from "../layouts/Layout.astro"
+import HomePageTabs from "../components/HomePageTabs.astro"
+import Slideshow from "../components/Slideshow.tsx"
+import MapComponent from "../components/Map.astro"
+import FAQ from "../components/FAQ.astro"
+import { getCollection } from "astro:content"
+import { getImage, Image } from "astro:assets"
+import { compareDesc } from "date-fns"
+import slides from "../data/slides.json"
+
+const blogEntries = await getCollection("blog").then((entries) =>
+	entries.sort((a, b) =>
+		compareDesc(new Date(a.data.date), new Date(b.data.date)),
+	),
+)
+const latestEntry = blogEntries[0]
+
+import roseAndBoard from "../images/roseandboard.png"
+import lightRail from "../images/lightrail.png"
+const optimizedRoseAndBoard = await getImage({ src: roseAndBoard })
+---
+
+<Layout title="US Go Congress 2024">
+	<div class="relative">
+		<div
+			style={`background-image: url('${optimizedRoseAndBoard.src}');`}
+			class="relative bg-cover bg-right sm:py-8 lg:py-16"
+		>
+			<!-- Positioning and styling for the overlay -->
+			<div
+				class="flex-col items-center gap-[10px] mx-[20px] my-[20px] bg-white/90 p-4 max-w-xl rounded-[25px]"
+			>
+				<h1 class="text-center text-[48px] font-bold font-jura">
+					US Go Congress 2024
+				</h1>
+				<h2 class="text-xl md:text-3xl font-jura">July 13-21</h2>
+				<p class="font-sans">
+					Registration for the 40th annual US Go Congress will open soon!
+					Remember to save the dates of July 13th through 21st for the Congress
+					itself, but in the meantime if you’d like to help out with planning
+					the event we’re always looking for volunteers!
+				</p>
+				<button class="px-4 py-2 bg-agagreen text-white rounded-[10px]"
+					>Find Out More</button
+				>
+			</div>
+		</div>
+	</div>
+	<div class="h-20 bg-agablue"></div>
+	<section class="mb-8 mx-4 text-white">
+		<h2 class="text-[48px] font-jura font-bold mb-2">
+			<a href="/blog">News</a>
+		</h2>
+		<h4 class="text-[20px] font-sans mb-4">
+			Check back regularly to keep track of registration updates and
+			announcements, pro spotlights, and more!
+		</h4>
+		<div class="flex flex-col md:flex-row gap-8">
+			<div class="w-full md:w-1/2">
+				<iframe
+					class="w-full aspect-video"
+					src="https://www.youtube.com/embed/0zKT6UBexOc?si=wRLJkdvkp7smoe1m"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen></iframe>
+			</div>
+			<div class="w-full md:w-1/2">
+				<a href="{{ latestPost.url }}"
+					><h3 class="text-[36px] font-semibold font-jura">
+						{latestEntry.data.title}
+					</h3></a
+				>
+				<h5 class="font-sans text-[20px] font-semibold ml-[20px] mb-[20px]">
+					by {latestEntry.data.author}
+				</h5>
+				<div class="font-sans">
+					<p>{latestEntry.body.slice(0, 300)}</p>
+				</div>
+				<a class="font-bold" href="{{ latestPost.url }}">Read more</a>
+			</div>
+		</div>
+	</section>
+	<section class="mx-2">
+		<HomePageTabs />
+	</section>
+	<Slideshow slides={slides} client:only="solid-js" />
+	<section class="mx-8">
+		<h2 class="font-jura text-center font-bold text-[48px] text-white">
+			Lodging and Transportation
+		</h2>
+		<div class="flex flex-col md:flex-row w-full gap-6 h-[480px]">
+			<MapComponent className="w-full md:w-1/2 aspect-square" />
+			<div class="w-full md:w-1/2 h-auto">
+				<h3 class="font-jura font-semibold text-[40px] text-white text-center">
+					Lodging Options
+				</h3>
+				<div class="font-sans text-[20px] text-white">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam
+					ultrices sagittis orci a scelerisque purus. Velit laoreet id donec
+					ultrices tincidunt arcu non sodales. Elementum sagittis vitae et leo
+					duis ut diam quam.
+				</div>
+			</div>
+		</div>
+		<div class="flex w-full gap-6">
+			<div class="w-full md:w-1/2 h-auto">
+				<h3 class="font-jura font-semibold text-[40px] text-white text-center">
+					Ride Light Rail Straight to Congress
+				</h3>
+				<div class="font-sans text-[20px] text-white">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam
+					ultrices sagittis orci a scelerisque purus. Velit laoreet id donec
+					ultrices tincidunt arcu non sodales. Elementum sagittis vitae et leo
+					duis ut diam quam.
+				</div>
+			</div>
+			<div class="w-full md:w-1/2 h-auto">
+				<Image src={lightRail} alt="Light Rail" />
+			</div>
+		</div>
+	</section>
+	<FAQ />
+</Layout>

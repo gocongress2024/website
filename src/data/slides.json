@@ -1,0 +1,15 @@
+[
+  {
+    "url": "https://placehold.co/600x400",
+    "title": "Image 1",
+    "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam ni"
+  },
+  {
+    "url": "https://placehold.co/600x400/orange/white",
+    "title": "Image 2"
+  },
+  {
+    "url": "https://placehold.co/600x400/blue/white",
+    "title": "Image 3"
+  }
+]
