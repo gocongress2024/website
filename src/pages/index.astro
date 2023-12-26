@@ -91,7 +91,7 @@ const optimizedRoseAndBoard = await getImage({ src: roseAndBoard })
 			Lodging and Transportation
 		</h2>
 		<div class="flex flex-col md:flex-row w-full gap-6 h-[480px]">
-			<MapComponent className="w-full md:w-1/2 aspect-square" />
+			<MapComponent class="w-full md:w-1/2 aspect-square" />
 			<div class="w-full md:w-1/2 h-auto">
 				<h3 class="font-jura font-semibold text-[40px] text-white text-center">
 					Lodging Options
@@ -105,8 +105,8 @@ const optimizedRoseAndBoard = await getImage({ src: roseAndBoard })
 				</div>
 			</div>
 		</div>
-		<div class="flex w-full gap-6">
-			<div class="w-full md:w-1/2 h-auto">
+		<div class="flex flex-col md:flex-row w-full gap-6">
+			<div class="w-full h-auto">
 				<h3 class="font-jura font-semibold text-[40px] text-white text-center">
 					Ride Light Rail Straight to Congress
 				</h3>
@@ -118,7 +118,7 @@ const optimizedRoseAndBoard = await getImage({ src: roseAndBoard })
 					duis ut diam quam.
 				</div>
 			</div>
-			<div class="w-full md:w-1/2 h-auto">
+			<div class="w-full h-auto">
 				<Image src={lightRail} alt="Light Rail" />
 			</div>
 		</div>

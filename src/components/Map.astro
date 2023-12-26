@@ -3,10 +3,12 @@ import MapComponent from "./Map.tsx"
 import places from "../data/mapPlaces.json"
 
 interface Props {
-  className: string
+  class: string
 }
-
-const { className } = Astro.props
 ---
 
-<MapComponent class={className} places={places} client:only="solid-js" />
+<MapComponent
+  class={Astro.props.class}
+  places={places}
+  client:only="solid-js"
+/>

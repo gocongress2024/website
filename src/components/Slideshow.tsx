@@ -38,7 +38,7 @@ const SlideShow: Component<Props> = (props) => {
                   alt={slide.caption}
                 />
                 <p
-                  class={`absolute bottom-0 w-full bg-black/50 px-2 pb-8 text-center ${
+                  class={`absolute bottom-0 w-full bg-black/50 px-2 pb-8 text-center text-white ${
                     !slide.caption && "hidden"
                   }`}
                 >

@@ -14,8 +14,8 @@ const FAQs: Component<Props> = (props) => (
   <Accordion.Root multiple>
     <For each={props.faqs}>
       {(faq, i) => (
-        <Accordion.Item value={`faq-${i}`}>
-          <Accordion.Header class="mt-[20px] w-full rounded-[25px] bg-agayellow px-[40px] py-[25px] text-left font-jura text-[40px] font-semibold text-white">
+        <Accordion.Item value={`faq-${i()}`}>
+          <Accordion.Header class="mt-[20px] w-full rounded-[25px] bg-agayellow px-[40px] py-[25px] text-left font-jura text-[20px] font-semibold text-white md:text-[40px]">
             <Accordion.Trigger class="h-full w-full">
               {faq.question}
             </Accordion.Trigger>
