@@ -1,0 +1,28 @@
+---
+import type { ImageMetadata } from "astro"
+import { For } from "solid-js"
+import { Image } from "astro:assets"
+import SlideshowComponent from "./Slideshow.tsx"
+import slides from "../data/slides.json"
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/images/photos/*.{jpg,jpeg,png}",
+)
+---
+
+<SlideshowComponent count={2} client:only="solid-js">
+  <Image
+    slot={`slot-0`}
+    height={600}
+    class="mx-auto"
+    src={images[slides[0].url]()}
+    alt=""
+  />
+  <Image
+    slot={`slot-1`}
+    height={600}
+    class="mx-auto"
+    src={images[slides[1].url]()}
+    alt=""
+  />
+</SlideshowComponent>

@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import HomePageTabs from "../components/HomePageTabs.astro"
-import Slideshow from "../components/Slideshow.tsx"
+import Slideshow from "../components/Slideshow.astro"
 import MapComponent from "../components/Map.astro"
 import FAQ from "../components/FAQ.astro"
 import { getCollection } from "astro:content"
@@ -85,7 +85,7 @@ const optimizedRoseAndBoard = await getImage({ src: roseAndBoard })
 	<section class="mx-2">
 		<HomePageTabs />
 	</section>
-	<Slideshow slides={slides} client:only="solid-js" />
+	<Slideshow />
 	<section class="mx-8">
 		<h2 class="font-jura text-center font-bold text-[48px] text-white">
 			Lodging and Transportation

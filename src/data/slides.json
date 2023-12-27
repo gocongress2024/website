@@ -1,11 +1,11 @@
 [
   {
-    "url": "https://placehold.co/600x400",
+    "url": "/src/images/photos/youth-1.jpg",
     "title": "Image 1",
     "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam ni"
   },
   {
-    "url": "https://placehold.co/600x400/orange/white",
+    "url": "/src/images/photos/youth-2.jpg",
     "title": "Image 2"
   },
   {
