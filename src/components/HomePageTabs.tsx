@@ -8,7 +8,7 @@ interface Props {
 
 const HomePageTabs: Component<Props> = (props) => (
   <Tabs.Root>
-    <Tabs.List class="flex gap-2 border-b md:gap-[14px]">
+    <Tabs.List class="flex gap-2 md:gap-[14px]">
       <Tabs.Trigger
         class="tablinks rounded-t-[25px] bg-agagreen p-4 font-jura text-[16px] font-semibold ui-selected:bg-agayellow md:h-[80px] md:w-[250px] md:text-[36px]"
         value="events"
