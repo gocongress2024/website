@@ -1,14 +1,38 @@
 [
   {
-    "name": "Keller Auditorium",
-    "address": "222 SW Clay St, Portland, OR 97201",
-    "lat": 45.5165,
-    "lng": -122.6819
+    "name": "Smith Memorial Student Union (Go Congress)",
+    "address": "1825 SW Broadway, Portland, OR 97201",
+    "lat": 45.511828,
+    "lng": -122.684273
   },
   {
-    "name": "Hotel 1",
-    "address": "1355 SW 2nd Ave, Portland, OR 97201",
-    "lat": 45.513741,
-    "lng": -122.6772
+    "name": "Hotel Vance",
+    "address": "1455 SW Broadway, Portland, OR 97201",
+    "lat": 45.514542,
+    "lng": -122.682610
+  },
+  {
+    "name": "Hotel Zags",
+    "address": "515 SW Clay St, Portland, OR 97201",
+    "lat": 45.513962,
+    "lng": -122.680763
+  },
+  {
+    "name": "University Place Hotel",
+    "address": "310 SW Lincoln St, Portland, OR 97201",
+    "lat": 45.506981,
+    "lng": -122.680450
+  },
+  {
+    "name": "Andine Hall Dormitory",
+    "address": "1912 SW 6th Ave, Portland, OR 97201",
+    "lat": 45.506981,
+    "lng": -122.680450
+  },
+  {
+    "name": "Broadway Hall Dormitory",
+    "address": "625 SW Jackson St, Portland, OR 97201",
+    "lat": 45.509361,
+    "lng": -122.684868
   }
 ]
