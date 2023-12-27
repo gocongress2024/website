@@ -1,4 +1,4 @@
-import { Map, Marker, icon, tileLayer } from "leaflet"
+import { Control, Map, Marker, icon, tileLayer } from "leaflet"
 import "leaflet/dist/leaflet.css"
 import { createUniqueId, onMount, type Component } from "solid-js"
 
@@ -25,13 +25,14 @@ const MapComponent: Component<Props> = (props) => {
   onMount(() => {
     const map = new Map(id).setView(
       [props.places[0].lat, props.places[0].lng],
-      13,
+      15,
     )
     tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution:
         '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     }).addTo(map)
+    new Control.Scale().addTo(map)
 
     props.places.forEach((place, i) => {
       const m = new Marker([place.lat, place.lng]).addTo(map)
