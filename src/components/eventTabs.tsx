@@ -1,14 +1,16 @@
 import { Tabs } from "@kobalte/core"
-import { For, Show, type Component } from "solid-js"
+import { For, type Component } from "solid-js"
 
 export interface EventTab {
   title: string
   description: string
-  imageUrl?: string
+  image: string
 }
 
+type SlotKey = `slot${string}`
 interface Props {
   events: EventTab[]
+  [key: SlotKey]: any
 }
 
 const EventTabs: Component<Props> = (props) => (
@@ -28,14 +30,8 @@ const EventTabs: Component<Props> = (props) => (
     <For each={props.events}>
       {(event) => (
         <Tabs.Content value={event.title.toLowerCase()}>
-          <Show when={event.imageUrl}>
-            <img
-              class="mx-auto h-[370px] w-auto"
-              src={event.imageUrl}
-              alt="event image"
-            />
-          </Show>
-          <div class="mx-auto max-w-2xl font-sans text-[20px]">
+          <img class="mx-auto pt-24" src={event.image.src} />
+          <div class="mx-auto max-w-2xl pb-16 pt-8 font-sans text-[20px]">
             {event.description}
           </div>
         </Tabs.Content>

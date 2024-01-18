@@ -3,30 +3,45 @@ import { Swiper, SwiperSlide } from "swiper/solid"
 
 import "swiper/css"
 
-import type { ParentComponent } from "solid-js"
+import type { Component } from "solid-js"
 import "swiper/css/pagination"
 
-type SlotKey = `slot-${number}`
-
-interface Props {
-  count: number
-  [key: SlotKey]: any
+interface Slide {
+  image?: ImageMetadata
+  caption: string
 }
 
-const SlideShow: ParentComponent<Props> = (props) => {
+interface Props {
+  slides: Slide[]
+}
+
+const SlideShow: Component<Props> = (props) => {
   return (
     <Swiper
       // install Swiper modules
       modules={[Pagination, Autoplay]}
-      spaceBetween={50}
+      spaceBetween={0}
       slidesPerView={1}
       pagination={{ clickable: true }}
       autoplay={{ delay: 5000 }}
     >
-      {[...Array(props.count).keys()].map((i) => (
+      {props.slides.map((slide) => (
         <SwiperSlide>
-          <div class="h-min w-full bg-black">
-            <div class="relative mx-auto w-max">{props[`slot-${i}`]}</div>
+          <div class="flex h-[500px] w-full items-center justify-center bg-black">
+            <div class="relative mx-auto h-full w-full w-max">
+              <img
+                class="h-full w-full object-contain"
+                src={slide.image?.src}
+                alt={slide.caption}
+              />
+              <p
+                class={`absolute bottom-0 w-full bg-black/50 px-2 pb-8 text-center text-white ${
+                  !slide.caption && "hidden"
+                }`}
+              >
+                {slide.caption}
+              </p>
+            </div>
           </div>
         </SwiperSlide>
       ))}

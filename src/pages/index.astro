@@ -7,7 +7,6 @@ import FAQ from "../components/FAQ.astro"
 import { getCollection } from "astro:content"
 import { getImage, Image } from "astro:assets"
 import { compareDesc } from "date-fns"
-import slides from "../data/slides.json"
 
 const blogEntries = await getCollection("blog").then((entries) =>
 	entries.sort((a, b) =>
@@ -22,98 +21,126 @@ const optimizedRoseAndBoard = await getImage({ src: roseAndBoard })
 ---
 
 <Layout title="US Go Congress 2024">
-	<div class="relative">
-		<div
-			style={`background-image: url('${optimizedRoseAndBoard.src}');`}
-			class="relative bg-cover bg-right sm:py-8 lg:py-16"
-		>
-			<!-- Positioning and styling for the overlay -->
+	<div class="bg-agablue">
+		<div class="relative">
 			<div
-				class="flex-col items-center gap-[10px] mx-[20px] my-[20px] bg-white/90 p-4 max-w-xl rounded-[25px]"
+				style={`background-image: url('${optimizedRoseAndBoard.src}');`}
+				class="relative bg-cover bg-right sm:py-8 lg:py-16 py-[20px]"
 			>
-				<h1 class="text-center text-[48px] font-bold font-jura">
-					US Go Congress 2024
-				</h1>
-				<h2 class="text-xl md:text-3xl font-jura">July 13-21</h2>
-				<p class="font-sans">
-					Registration for the 40th annual US Go Congress will open soon!
-					Remember to save the dates of July 13th through 21st for the Congress
-					itself, but in the meantime if you’d like to help out with planning
-					the event we’re always looking for volunteers!
-				</p>
-				<button class="px-4 py-2 bg-agagreen text-white rounded-[10px]"
-					>Find Out More</button
+				<!-- Positioning and styling for the overlay -->
+				<div
+					class="flex-col items-center gap-[10px] mx-[20px] bg-white/90 p-4 max-w-xl rounded-[25px]"
 				>
+					<h1
+						class="leading-tight text-center text-[48px] font-bold font-open-sans"
+					>
+						US Go Congress 2024
+					</h1>
+					<h2 class="text-xl md:text-3xl font-open-sans">July 13-21</h2>
+					<p class="font-sans">
+						Registration for the 40th annual US Go Congress will open soon!
+						Remember to save the dates of July 13th through 21st for the
+						Congress itself, but in the meantime if you’d like to help out with
+						planning the event we’re always looking for volunteers!
+					</p>
+					<button class="px-4 py-2 bg-agagreen text-white rounded-[10px]"
+						>Find Out More</button
+					>
+				</div>
 			</div>
+		</div>
+		<section class="mb-4 mx-4 text-white">
+			<h2 class="text-[48px] font-open-sans font-bold mb-2">
+				<a href="/blog">News</a>
+			</h2>
+			<h4 class="text-[20px] font-sans mb-4">
+				Check back regularly to keep track of registration updates and
+				announcements, pro spotlights, and more!
+			</h4>
+			<div class="flex flex-col md:flex-row gap-8">
+				<div class="w-full md:w-1/2">
+					<iframe
+						class="w-full aspect-video"
+						src="https://www.youtube.com/embed/0zKT6UBexOc?si=wRLJkdvkp7smoe1m"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen></iframe>
+				</div>
+				<div class="w-full md:w-1/2">
+					<a href="{{ latestPost.url }}"
+						><h3 class="text-[36px] font-semibold font-open-sans">
+							{latestEntry.data.title}
+						</h3></a
+					>
+					<h5 class="font-sans text-[20px] font-semibold ml-[20px] mb-[20px]">
+						by {latestEntry.data.author}
+					</h5>
+					<div class="font-sans">
+						<p>{latestEntry.body.slice(0, 300)}</p>
+					</div>
+					<a class="font-bold" href="{{ latestPost.url }}">Read more</a>
+				</div>
+			</div>
+		</section>
+		<section class="mx-2">
+			<HomePageTabs />
+		</section>
+		<Slideshow />
+		<section class="mx-8">
+			<h2
+				class="font-open-sans text-center mb-8 w-full md:w-1/2 font-bold text-[40px] md:text-[48px] text-white"
+			>
+				Lodging and Transportation
+			</h2>
+			<div class="flex flex-col md:flex-row w-full gap-6 h-[480px]">
+				<MapComponent class="w-full md:w-1/2 aspect-square" />
+				<div class="w-full md:w-1/2 h-auto">
+					<h3
+						class="font-open-sans mb-8 font-semibold text-[40px] text-white text-center"
+					>
+						Lodging Options
+					</h3>
+					<div class="font-sans text-[20px] text-white">
+						The 2024 US Go Congress has partnered with Portland State University
+						and several nearby hotels to offer a variety of lodging options
+						within convienient walking distance of the Go Congress venue.
+					</div>
+				</div>
+			</div>
+			<div class="flex flex-col md:flex-row w-full gap-6">
+				<div class="w-full h-auto">
+					<h3
+						class="font-open-sans mb-8 font-semibold text-[40px] text-white text-center"
+					>
+						Transportation
+					</h3>
+					<div class="font-sans text-[20px] text-white">
+						It is not necessary to rent a car or take a taxi to get to the Go
+						Congress! For just $2.90, you can take the MAX Light Rail system
+						from the airport directly to the Portland State University campus.
+					</div>
+				</div>
+				<div class="w-full h-auto">
+					<Image src={lightRail} alt="Light Rail" />
+				</div>
+			</div>
+		</section>
+		<div class="font-open-sans text-[48px] text-white mt-12 mx-[20px]">
+			Frequently Asked Questions
+		</div>
+		<FAQ />
+		<div
+			class="mt-28 mb-8 text-white text-center text-[24px] md:text-[48px] font-open-sans"
+		>
+			So what are you waiting for?
+		</div>
+		<div class="flex justify-center w-full mb-20">
+			<a
+				href="/registration"
+				class="py-[23px] mx-auto px-[98px] rounded-[50px] bg-agagreen text-white font-open-sans text-[24px] md:text-[48px]"
+				>Register Now</a
+			>
 		</div>
 	</div>
-	<div class="h-20 bg-agablue"></div>
-	<section class="mb-8 mx-4 text-white">
-		<h2 class="text-[48px] font-jura font-bold mb-2">
-			<a href="/blog">News</a>
-		</h2>
-		<h4 class="text-[20px] font-sans mb-4">
-			Check back regularly to keep track of registration updates and
-			announcements, pro spotlights, and more!
-		</h4>
-		<div class="flex flex-col md:flex-row gap-8">
-			<div class="w-full md:w-1/2">
-				<iframe
-					class="w-full aspect-video"
-					src="https://www.youtube.com/embed/0zKT6UBexOc?si=wRLJkdvkp7smoe1m"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					allowfullscreen></iframe>
-			</div>
-			<div class="w-full md:w-1/2">
-				<a href="{{ latestPost.url }}"
-					><h3 class="text-[36px] font-semibold font-jura">
-						{latestEntry.data.title}
-					</h3></a
-				>
-				<h5 class="font-sans text-[20px] font-semibold ml-[20px] mb-[20px]">
-					by {latestEntry.data.author}
-				</h5>
-				<div class="font-sans">
-					<p>{latestEntry.body.slice(0, 300)}</p>
-				</div>
-				<a class="font-bold" href="{{ latestPost.url }}">Read more</a>
-			</div>
-		</div>
-	</section>
-	<section class="mx-2">
-		<HomePageTabs />
-	</section>
-	<Slideshow />
-	<section class="mx-8">
-		<h2 class="font-jura text-center font-bold text-[48px] text-white">
-			Lodging and Transportation
-		</h2>
-		<div class="flex flex-col md:flex-row w-full gap-6 h-[480px]">
-			<MapComponent class="w-full md:w-1/2 aspect-square" />
-			<div class="w-full md:w-1/2 h-auto">
-				<h3 class="font-jura font-semibold text-[40px] text-white text-center">
-					Lodging Options
-				</h3>
-				<div class="font-sans text-[20px] text-white">
-					The 2024 US Go Congress has partnered with Portland State University and several nearby hotels to offer a variety of lodging options within convienient walking distance of the Go Congress venue.
-				</div>
-			</div>
-		</div>
-		<div class="flex flex-col md:flex-row w-full gap-6">
-			<div class="w-full h-auto">
-				<h3 class="font-jura font-semibold text-[40px] text-white text-center">
-					Transportation
-				</h3>
-				<div class="font-sans text-[20px] text-white">
-					It is not necessary to rent a car or take a taxi to get to the Go Congress! For just $2.90, you can take the MAX Light Rail system from the airport directly to the Portland State University campus.
-				</div>
-			</div>
-			<div class="w-full h-auto">
-				<Image src={lightRail} alt="Light Rail" />
-			</div>
-		</div>
-	</section>
-	<FAQ />
 </Layout>

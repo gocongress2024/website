@@ -1,9 +1,8 @@
 import { Tabs } from "@kobalte/core"
 import type { Component } from "solid-js"
-import EventTabs, { type EventTab } from "./eventTabs"
 
 interface Props {
-  events: EventTab[]
+  events: any
 }
 
 const HomePageTabs: Component<Props> = (props) => (
@@ -28,9 +27,7 @@ const HomePageTabs: Component<Props> = (props) => (
         Excursions
       </Tabs.Trigger>
     </Tabs.List>
-    <Tabs.Content value="events">
-      <EventTabs events={props.events} />
-    </Tabs.Content>
+    <Tabs.Content value="events">{props.events}</Tabs.Content>
   </Tabs.Root>
 )
 

@@ -14,6 +14,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ["Inter", "sans-serif"],
+				"open-sans": ["Open Sans", "sans-serif"],
 				jura: ["Jura", "sans-serif"],
 			},
 		},

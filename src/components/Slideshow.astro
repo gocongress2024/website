@@ -1,28 +1,21 @@
 ---
 import type { ImageMetadata } from "astro"
-import { For } from "solid-js"
-import { Image } from "astro:assets"
+import { getImage } from "astro:assets"
 import SlideshowComponent from "./Slideshow.tsx"
 import slides from "../data/slides.json"
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/images/photos/*.{jpg,jpeg,png}",
 )
+
+const slidesWithOpimizedImages = await Promise.all(
+  slides.map(async (slide) => ({
+    caption: slide.caption,
+    image: images[slide.url]
+      ? await getImage({ src: images[slide.url](), width: 800 })
+      : undefined,
+  })),
+)
 ---
 
-<SlideshowComponent count={2} client:only="solid-js">
-  <Image
-    slot={`slot-0`}
-    height={600}
-    class="mx-auto"
-    src={images[slides[0].url]()}
-    alt=""
-  />
-  <Image
-    slot={`slot-1`}
-    height={600}
-    class="mx-auto"
-    src={images[slides[1].url]()}
-    alt=""
-  />
-</SlideshowComponent>
+<SlideshowComponent slides={slidesWithOpimizedImages} client:only="solid-js" />

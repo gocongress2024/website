@@ -2,26 +2,26 @@
   {
     "title": "US Open",
     "description": "The centerpiece of the US Go Congress is the annual US Open, the largest and most prestigious Go tournament in North America. The US Open is open to players of all levels and attracts top players from around the world! Attending the US Go Congress is an excellent opportunity to improve your Go skills, meet other players, and immerse yourself in the Go community. Whether you are a beginner or an experienced player, there is something for everyone at the US Go Congress.",
-    "image": "images/photos/us-open-1.jpg"
+    "image": "/src/images/photos/us-open-1.jpg"
   },
   {
     "title": "Masters",
     "description": "The North American Masters is a tournament between the strongest amateur and professional players invited from all over the world. Enjoy the live spectacle of Go being played at the highest level, with insightful commentary from seasoned pros!",
-    "image": "images/photos/masters-1.jpg"
+    "image": "/src/images/photos/masters-1.jpg"
   },
   {
     "title": "Youth",
     "description": "Kids and youth are VERY welcome at the Go Congress! Youth of all experience levels are welcome in the US Open and all the same events as adults, and can also enjoy hanging out in our youth room. (Ages 17 and under must have a designated guardian on-site. Adults should be warned that their children may outrank them by the end of the Congress!)",
-    "image": "images/photos/youth-1.jpg"
+    "image": "/src/images/photos/youth-1.jpg"
   },
   {
     "title": "Lectures",
     "description": "We've invited 17 pros to come give lectures, reviews and play simul games to help players study and improve their Go. Whether you're a double-digit kyu or a highly-rated dan player, there's sure to be something for you!",
-    "image": "images/photos/lectures-1.jpg"
+    "image": "/src/images/photos/lectures-1.jpg"
   },
   {
     "title": "Specialty Tournaments",
     "description": "Every evening we run a one-night casual tournament, including 9x9, 13x13, Lightning Go, and Crazy Go. Have you ever wondered what Go would be like on a polygonal board? Or what if there were 4 colors of stones instead of just 2?",
-    "image": "images/photos/specialty-1.jpg"
+    "image": "/src/images/photos/specialty-1.jpg"
   }
 ]

@@ -1,6 +1,8 @@
 ---
 import HomePageTabsComponent from "./HomePageTabs.tsx"
-import events from "../data/eventTabs.json"
+import EventTabsComponent from "./eventTabs.astro"
 ---
 
-<HomePageTabsComponent client:only="solid-js" events={events} />
+<HomePageTabsComponent client:only="solid-js">
+  <EventTabsComponent slot="events" />
+</HomePageTabsComponent>

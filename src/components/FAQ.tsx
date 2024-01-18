@@ -11,7 +11,7 @@ interface Props {
 }
 
 const FAQs: Component<Props> = (props) => (
-  <Accordion.Root multiple>
+  <Accordion.Root multiple class="mx-[20px]">
     <For each={props.faqs}>
       {(faq, i) => (
         <Accordion.Item value={`faq-${i()}`}>
