@@ -7,6 +7,8 @@ import FAQ from "../components/FAQ.astro"
 import { getCollection } from "astro:content"
 import { getImage, Image } from "astro:assets"
 import { compareDesc } from "date-fns"
+import WhatToExpectContent from "../data/eventTabs.json"
+import faqs from "../data/faqs.json"
 
 const blogEntries = await getCollection("blog").then((entries) =>
 	entries.sort((a, b) =>
@@ -18,6 +20,19 @@ const latestEntry = blogEntries[0]
 import roseAndBoard from "../images/roseandboard.png"
 import lightRail from "../images/lightrail.png"
 const optimizedRoseAndBoard = await getImage({ src: roseAndBoard })
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	"/src/images/photos/*.{jpg,jpeg,png}",
+)
+
+const whatToExpectWithOpimizedImages = await Promise.all(
+	WhatToExpectContent.map(async (event) => ({
+		...event,
+		image: images[event.image]
+			? await getImage({ src: images[event.image](), width: 600 })
+			: undefined,
+	})),
+)
 ---
 
 <Layout title="US Go Congress 2024">
@@ -83,8 +98,31 @@ const optimizedRoseAndBoard = await getImage({ src: roseAndBoard })
 				</div>
 			</div>
 		</section>
-		<section class="mx-2">
-			<HomePageTabs />
+		<section class="mx-4 mb-48">
+			<h3 class="font-open-sans font-bold text-[48px] text-white">
+				What to Expect
+			</h3>
+			<div class="ml-4 font-sans text-white text-[20px] mb-8">
+				There are a variety of events that are held every year at Congress, from
+				tournaments to pro lectures to excursions and community events. Some of
+				these are different from year to year depending on the location, so
+				here’s an idea of what we have planned so far for this year’s Congress.
+			</div>
+			{
+				whatToExpectWithOpimizedImages.map((event) => (
+					<div class="ml-4">
+						<h4 class="font-open-sans font-bold text-[32px] text-white">
+							{event.title}
+						</h4>
+						<div class="flex flex-col md:flex-row gap-12 justify-between ml-4">
+							<div class="font-sans text-[20px] text-white">
+								{event.description}
+							</div>
+							<img class="w-full md:w-[200px]" src={event.image?.src} />
+						</div>
+					</div>
+				))
+			}
 		</section>
 		<Slideshow />
 		<section class="mx-8">
@@ -129,7 +167,16 @@ const optimizedRoseAndBoard = await getImage({ src: roseAndBoard })
 		<div class="font-open-sans text-[48px] text-white mt-12 mx-[20px]">
 			Frequently Asked Questions
 		</div>
-		<FAQ />
+		{
+			faqs.map((faq, i) => (
+				<div class="mx-[20px]">
+					<div class="font-open-sans text-[20px] font-semibold text-white mt-12">
+						{faq.question}
+					</div>
+					<div class="font-sans text-[20px] text-white">{faq.answer}</div>
+				</div>
+			))
+		}
 		<div
 			class="mt-28 mb-8 text-white text-center text-[24px] md:text-[48px] font-open-sans"
 		>
