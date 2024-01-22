@@ -33,6 +33,8 @@ const whatToExpectWithOpimizedImages = await Promise.all(
 			: undefined,
 	})),
 )
+
+const basePath = "/website/"
 ---
 
 <Layout title="US Go Congress 2024">
@@ -58,7 +60,7 @@ const whatToExpectWithOpimizedImages = await Promise.all(
 						Congress itself, but in the meantime if you’d like to help out with
 						planning the event we’re always looking for volunteers!
 					</p>
-					<a href={`${import.meta.env.PUBLIC_BASE_PATH}/registration`}
+					<a href={`${basePath}/registration`}
 						><button class="px-4 py-2 bg-agagreen text-white rounded-[10px]"
 							>Find Out More</button
 						></a
@@ -68,7 +70,7 @@ const whatToExpectWithOpimizedImages = await Promise.all(
 		</div>
 		<section class="mb-4 mx-4 text-white">
 			<h2 class="text-[48px] font-open-sans font-bold mb-2">
-				<a href="{`${import.meta.env.PUBLIC_BASE_PATH}/blog`}">News</a>
+				<a href="{`${basePath}/blog`}">News</a>
 			</h2>
 			<h4 class="text-[20px] font-sans mb-4">
 				Check back regularly to keep track of registration updates and
@@ -85,8 +87,7 @@ const whatToExpectWithOpimizedImages = await Promise.all(
 						allowfullscreen></iframe>
 				</div>
 				<div class="w-full md:w-1/2">
-					<a
-						href={`${import.meta.env.PUBLIC_BASE_PATH}blog/${latestEntry.slug}`}
+					<a href={`${basePath}blog/${latestEntry.slug}`}
 						><h3 class="text-[36px] font-semibold font-open-sans">
 							{latestEntry.data.title}
 						</h3></a
@@ -97,9 +98,7 @@ const whatToExpectWithOpimizedImages = await Promise.all(
 					<div class="font-sans">
 						<p>{latestEntry.data.excerpt}</p>
 					</div>
-					<a
-						class="font-bold"
-						href={`${import.meta.env.PUBLIC_BASE_PATH}blog/${latestEntry.slug}`}
+					<a class="font-bold" href={`${basePath}blog/${latestEntry.slug}`}
 						>Read more</a
 					>
 				</div>
@@ -194,7 +193,7 @@ const whatToExpectWithOpimizedImages = await Promise.all(
 		</div>
 		<div class="flex justify-center w-full mb-20">
 			<a
-				href={`${import.meta.env.PUBLIC_BASE_PATH}/registration`}
+				href={`${basePath}/registration`}
 				class="py-[23px] mx-auto px-[98px] rounded-[50px] bg-agagreen text-white font-open-sans text-[24px] md:text-[48px]"
 				>Register Now</a
 			>
