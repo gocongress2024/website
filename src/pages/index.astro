@@ -85,7 +85,8 @@ const whatToExpectWithOpimizedImages = await Promise.all(
 						allowfullscreen></iframe>
 				</div>
 				<div class="w-full md:w-1/2">
-					<a href="{{ latestPost.url }}"
+					<a
+						href={`${import.meta.env.PUBLIC_BASE_PATH}blog/${latestEntry.slug}`}
 						><h3 class="text-[36px] font-semibold font-open-sans">
 							{latestEntry.data.title}
 						</h3></a
@@ -94,9 +95,13 @@ const whatToExpectWithOpimizedImages = await Promise.all(
 						by {latestEntry.data.author}
 					</h5>
 					<div class="font-sans">
-						<p>{latestEntry.body.slice(0, 300)}</p>
+						<p>{latestEntry.data.excerpt}</p>
 					</div>
-					<a class="font-bold" href="{{ latestPost.url }}">Read more</a>
+					<a
+						class="font-bold"
+						href={`${import.meta.env.PUBLIC_BASE_PATH}blog/${latestEntry.slug}`}
+						>Read more</a
+					>
 				</div>
 			</div>
 		</section>
