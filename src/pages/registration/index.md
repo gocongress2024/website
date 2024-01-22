@@ -12,6 +12,6 @@ Look in the top right corner of the site for both options. (If you reside outsid
 
 2. Click this <a href="https://usgo.org/content.aspx?page_id=4002&club_id=454497&item_id=2169601&eml=1" target="_blank">link</a> to register for congress. You will also register for the end of Congress banquet here.
 
-3. Click this <a href="registration/housing" target="_blank">link</a> to access our housing options and to sign up for a meal plan.
+3. Click this <a href="housing" target="_blank">link</a> to access our housing options and to sign up for a meal plan.
 
 ### Once those are complete, you’re done! Please reach out to registrar@gocongress.org with any questions or concerns.
