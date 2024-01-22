@@ -3,12 +3,13 @@ import { Swiper, SwiperSlide } from "swiper/solid"
 
 import "swiper/css"
 
+import type { GetImageResult } from "astro"
 import type { Component } from "solid-js"
 import "swiper/css/pagination"
 
 interface Slide {
-  image?: ImageMetadata
-  caption: string
+  image?: GetImageResult
+  caption?: string
 }
 
 interface Props {

@@ -1,10 +1,11 @@
 import { Tabs } from "@kobalte/core"
+import type { GetImageResult } from "astro"
 import { For, type Component } from "solid-js"
 
 export interface EventTab {
   title: string
   description: string
-  image: string
+  image: GetImageResult
 }
 
 type SlotKey = `slot${string}`

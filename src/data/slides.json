@@ -1,15 +1,14 @@
 [
   {
-    "url": "/src/images/photos/youth-1.jpg",
-    "title": "Image 1",
-    "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, nec aliquam ni"
+    "url": "/src/images/photos/Portland/AerielHighRiseDaytime.jpg",
+    "title": "Skyline"
   },
   {
-    "url": "/src/images/photos/youth-2.jpg",
-    "title": "Image 2"
+    "url": "/src/images/photos/Portland/Green trees near water.jpg",
+    "title": "Waterfront"
   },
   {
-    "url": "https://placehold.co/600x400/blue/white",
-    "title": "Image 3"
+    "url": "/src/images/photos/Portland/Teal bridge near trees.jpg",
+    "title": "Bridge"
   }
 ]

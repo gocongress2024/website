@@ -5,12 +5,12 @@ import SlideshowComponent from "./Slideshow.tsx"
 import slides from "../data/slides.json"
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/images/photos/*.{jpg,jpeg,png}",
+  "/src/images/photos/Portland/*.{jpg,jpeg,png}",
 )
 
 const slidesWithOpimizedImages = await Promise.all(
   slides.map(async (slide) => ({
-    caption: slide.caption,
+    ...slide,
     image: images[slide.url]
       ? await getImage({ src: images[slide.url](), width: 800 })
       : undefined,
