@@ -9,7 +9,7 @@ import mdx from "@astrojs/mdx"
 export default defineConfig({
   integrations: [solidJs(), tailwind(), icon(), mdx()],
   site: "https://gocongress2024.github.io",
-  base: "/website",
+  base: "/website/",
   vite: {
     ssr: {
       noExternal: ["swiper"],

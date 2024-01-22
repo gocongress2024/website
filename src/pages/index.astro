@@ -58,15 +58,17 @@ const whatToExpectWithOpimizedImages = await Promise.all(
 						Congress itself, but in the meantime if you’d like to help out with
 						planning the event we’re always looking for volunteers!
 					</p>
-					<button class="px-4 py-2 bg-agagreen text-white rounded-[10px]"
-						>Find Out More</button
+					<a href={`${import.meta.env.PUBLIC_BASE_PATH}/registration`}
+						><button class="px-4 py-2 bg-agagreen text-white rounded-[10px]"
+							>Find Out More</button
+						></a
 					>
 				</div>
 			</div>
 		</div>
 		<section class="mb-4 mx-4 text-white">
 			<h2 class="text-[48px] font-open-sans font-bold mb-2">
-				<a href="/blog">News</a>
+				<a href="{`${import.meta.env.PUBLIC_BASE_PATH}/blog`}">News</a>
 			</h2>
 			<h4 class="text-[20px] font-sans mb-4">
 				Check back regularly to keep track of registration updates and
@@ -187,7 +189,7 @@ const whatToExpectWithOpimizedImages = await Promise.all(
 		</div>
 		<div class="flex justify-center w-full mb-20">
 			<a
-				href="/registration"
+				href={`${import.meta.env.PUBLIC_BASE_PATH}/registration`}
 				class="py-[23px] mx-auto px-[98px] rounded-[50px] bg-agagreen text-white font-open-sans text-[24px] md:text-[48px]"
 				>Register Now</a
 			>
