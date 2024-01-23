@@ -55,10 +55,7 @@ const basePath = "/website/"
 					</h1>
 					<h2 class="text-xl md:text-3xl font-open-sans">July 13-21</h2>
 					<p class="font-sans">
-						Registration for the 40th annual US Go Congress will open soon!
-						Remember to save the dates of July 13th through 21st for the
-						Congress itself, but in the meantime if you’d like to help out with
-						planning the event we’re always looking for volunteers!
+						Registration for the 40th annual US Go Congress is now open! Book now to take advantage of early bird rates!
 					</p>
 					<a href={`${basePath}/registration`}
 						><button class="px-4 py-2 bg-agagreen text-white rounded-[10px]"
@@ -70,7 +67,7 @@ const basePath = "/website/"
 		</div>
 		<section class="mb-4 mx-4 text-white">
 			<h2 class="text-[48px] font-open-sans font-bold mb-2">
-				<a href="{`${basePath}/blog`}">News</a>
+				News
 			</h2>
 			<h4 class="text-[20px] font-sans mb-4">
 				Check back regularly to keep track of registration updates and
@@ -130,15 +127,20 @@ const basePath = "/website/"
 				))
 			}
 		</section>
-		<h2 class="mx-8 font-open-sans mb-8 font-bold text-[48px] text-white">
-			Why Portland?
-		</h2>
+		<section class="mx-8">
+			<h2
+				class="font-open-sans text-center mb-8 w-full font-bold text-[40px] md:text-[48px] text-white"
+			>Why Portland</h2>
+			<div class="font-sans text-[20px] text-white">
+				Portland, OR is a gorgeous, walkable city! We have lots of delicious food, and a gorgeous venue at Portland State University. From the Japanese Garden to Powells City of Books, there are plenty of attractions to keep you busy when you're not enjoying a week of amazing Go games and lectures!
+			</div>
+		</section>
 		<Slideshow />
 		<section class="mx-8">
 			<h2
-				class="font-open-sans text-center mb-8 w-full md:w-1/2 font-bold text-[40px] md:text-[48px] text-white"
+				class="font-open-sans text-center mb-8 w-full font-bold text-[40px] md:text-[48px] text-white"
 			>
-				Lodging and Transportation
+				Housing and Transportation
 			</h2>
 			<div class="flex flex-col md:flex-row w-full gap-6 h-[480px]">
 				<MapComponent class="w-full md:w-1/2 aspect-square" />
@@ -146,12 +148,19 @@ const basePath = "/website/"
 					<h3
 						class="font-open-sans mb-8 font-semibold text-[40px] text-white text-center"
 					>
-						Lodging Options
+						Housing Options
 					</h3>
 					<div class="font-sans text-[20px] text-white">
 						The 2024 US Go Congress has partnered with Portland State University
-						and several nearby hotels to offer a variety of lodging options
+						and several nearby hotels to offer a variety of housing options
 						within convienient walking distance of the Go Congress venue.
+
+						<ol>
+							<li><a href="#">University Place Hotel</a>. An affordable hotel offering private rooms on a budget.<li>
+							<li><a href="#">Hotel Zags</a>. Upscale accommodations, offering suites and rooms.<li>
+							<li><a href="#">Hotel Vance</a>. Chic, modern hotel offering standard rooms.<li>
+							<li><a href="#">Ondine Hall & Broadway Hall</a>. Low-cost dormitory accommodations.<li>
+						</ol>
 					</div>
 				</div>
 			</div>
@@ -193,7 +202,7 @@ const basePath = "/website/"
 		</div>
 		<div class="flex justify-center w-full mb-20">
 			<a
-				href={`${basePath}/registration`}
+				href={`${basePath}registration/`}
 				class="py-[23px] mx-auto px-[98px] rounded-[50px] bg-agagreen text-white font-open-sans text-[24px] md:text-[48px]"
 				>Register Now</a
 			>
