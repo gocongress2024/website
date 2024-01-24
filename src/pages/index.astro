@@ -8,7 +8,6 @@ import { getCollection } from "astro:content"
 import { getImage, Image } from "astro:assets"
 import { compareDesc } from "date-fns"
 import WhatToExpectContent from "../data/eventTabs.json"
-import faqs from "../data/faqs.json"
 
 const blogEntries = await getCollection("blog").then((entries) =>
 	entries.sort((a, b) =>
