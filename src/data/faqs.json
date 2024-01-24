@@ -37,7 +37,7 @@
   },
   {
     "question": "Can I attend Congress for part of the week?",
-    "answer": "TODO: This was a Yes for 2023, but we haven't discussed it."
+    "answer": "Yes! E-mail the Registrar for per-day pricing. (TODO: e-mail link)"
   },
   {
     "question": "What is the weather like?",
@@ -61,7 +61,7 @@
   },
   {
     "question": "Do I have to register if I am not playing or going to lectures?",
-    "answer": "Anyone who uses the Congress for rooms, meals, or discounts must be registered at Congress. We recognize that there may be family members that will not be interested in participating in Go events, like tournaments and lectures from Professional Go Teachers. For these we have the much-reduced registration fee for Non-Participants of $120 for the week. Non-Participants also get a t-shirt and other congress gifts. The guardian of under-age youth participants must be registered at the Congress. TODO: double-check price, fill it in"
+    "answer": "Anyone who uses the Congress for rooms, meals, or discounts must be registered at Congress. We recognize that there may be family members that will not be interested in participating in Go events, like tournaments and lectures from Professional Go Teachers. For these we have the much-reduced registration fee for Non-Participants of $100 for the week. Non-Participants also get a t-shirt and other congress gifts. The guardian of under-age youth participants must be registered at the Congress."
   },
   {
     "question": "What is the youth policy?",
@@ -69,7 +69,7 @@
   },
   {
     "question": "What should I put for my rank?",
-    "answer": "In most cases you should put your current AGA rating. If you don’t know your AGA rating, go to the AGA website (www.usgo.org) and search by your name or AGA #. If you don’t have an AGA rating but do have one from a different organization, please consult the Sensei's Library for some guidance. The Tournament Directors have final say on rank. TODO: Sensei Link"
+    "answer": "In most cases you should use your current AGA rating. During registration, leave the field set to \"Use AGA rating.\" If you think you have a significantly different rank, enter the rank and an explanation (and prepare to be challenged by the Tournament Coordinator on check-in day :-) ). If you don't have an AGA rating, but do have one from a different organization please consult Sensei's Library for guidance. The Tournament Coordinator will have the final say."
   },
   {
     "question": "What about alcohol, tobacco, etc?",
@@ -81,14 +81,10 @@
   },
   {
     "question": "What about people with disabilities?",
-    "answer": "The Smith Memorial Student Union is equipped with ramps and elevators. TODO: what about housing options?"
+    "answer": "The Smith Memorial Student Union is equipped with ramps and elevators. The PSU dormitories have ADA dorm rooms available. For hotel options, please check with the specific hotel about availability of needed accommodations."
   },
   {
     "question": "What if I have an emergency?",
     "answer": "If there is a health emergency, contact any PSU or Go Congress staff member immediately to get help, or call 911."
-  },
-  {
-    "question": "Lost and Found",
-    "answer": "TODO: Are we gonna have a lost and found? Where?"
   }
 ]

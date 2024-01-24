@@ -5,7 +5,7 @@ title: 'Registration'
 
 ## Register for the 2024 AGA Congress
 
-### Welcome! To register there are 3 steps. Visit the page for each step, then come back here to go to the next step.
+### Welcome! To register there are 3 steps. Click the links for each step, then come back here to go to the next step.
 
 1. <a href="https://usgo.org" target="_blank">Log in or register for an AGA account</a>. 
 Look in the top right corner of the site for both options. (If you reside outside the US (or are a non player) a complementary AGA account option is available. Click the <a href="https://usgo.org/content.aspx?page_id=22&club_id=454497&module_id=642669" target="_blank">Join the AGA</a> button and you can sign up for free.)
