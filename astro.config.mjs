@@ -8,8 +8,8 @@ import mdx from "@astrojs/mdx"
 // https://astro.build/config
 export default defineConfig({
   integrations: [solidJs(), tailwind(), icon(), mdx()],
-  site: "https://gocongress2024.github.io",
-  base: "/website",
+  site: "https://gocongress.unitymath.io",
+  base: "/",
   vite: {
     ssr: {
       noExternal: ["swiper"],
