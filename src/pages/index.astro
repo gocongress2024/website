@@ -66,7 +66,7 @@ const basePath = "/"
 					<p class="font-sans">
 						Registration for the 40th annual US Go Congress is now open! Book now to take advantage of early bird rates!
 					</p>
-					<a href={`${basePath}/registration`}
+					<a href={`/registration`}
 						><button class="px-4 py-2 bg-agagreen text-white rounded-[10px]"
 							>Register Now!</button
 						></a
@@ -93,7 +93,7 @@ const basePath = "/"
 						allowfullscreen></iframe>
 				</div>
 				<div class="w-full md:w-1/2">
-					<a href={`${basePath}blog/${latestEntry.slug}`}
+					<a href={`/blog/${latestEntry.slug}`}
 						><h3 class="text-[36px] font-semibold font-open-sans">
 							{latestEntry.data.title}
 						</h3></a
@@ -104,7 +104,7 @@ const basePath = "/"
 					<div class="font-sans">
 						<p>{latestEntry.data.excerpt}</p>
 					</div>
-					<a class="font-bold" href={`${basePath}blog/${latestEntry.slug}`}
+					<a class="font-bold" href={`/blog/${latestEntry.slug}`}
 						>Read more</a
 					>
 				</div>
@@ -382,7 +382,7 @@ const basePath = "/"
 		</div>
 		<div class="flex justify-center w-full mb-20">
 			<a
-				href={`${basePath}registration/`}
+				href={`/registration/`}
 				class="py-[23px] mx-auto px-[98px] rounded-[50px] bg-agagreen text-white font-open-sans text-[24px] md:text-[48px]"
 				style="text-decoration: none"
 				>Register Now</a
