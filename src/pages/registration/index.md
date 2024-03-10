@@ -14,6 +14,6 @@ Look in the top right corner of the site for both options. (If you reside outsid
 
 2. <a href="https://usgo.org/content.aspx?page_id=4002&club_id=454497&item_id=2197916" target="_blank">Register for the 2024 US Go Congress</a> at the official AGA registration page. This is also where you will buy your ticket for the Awards Banquet!
  
-3. <a href="housing" target="_blank">Select a housing and meal plan option.</a> 
+3. <a href="/registration/housing" target="_blank">Select a housing and meal plan option.</a> 
 
 ### Once those are complete, you’re done! Please reach out to registrar@gocongress.org with any questions or concerns.
