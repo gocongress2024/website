@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets"
+import "@fontsource/inter"
+import "@fontsource-variable/open-sans"
+import agaLogo from "../images/aga-logo-circle.svg"
+import bridgeLogo from "../images/bridgeLogo.svg"
+interface Props {
+	title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{title}</title>
+		<slot name="head" />
+		<!-- Adjust the path as needed -->
+	</head>
+	<body class="bg-agablue">
+		<header>
+			<!-- Header content here -->
+			<nav class="flex justify-between h-20 bg-agablue">
+				<a href="/"
+					><Image
+						src={bridgeLogo}
+						alt="2024 Go Congress Logo"
+						class="h-20 w-20"
+					/></a
+				>
+				<div class="flex justify-start">
+					<a href="https://www.usgo.org">
+						<Image src={agaLogo} alt="AGA Logo" class="h-20 w-20" />
+					</a>
+				</div>
+				<div class="text-white flex">
+					<div class="flex flex-col justify-center w-max">
+						<div>July 13-21</div>
+						<div>Portland, Oregon</div>
+					</div>
+					<a
+						href="/registration"
+						class="md:block hidden text-black px-4 py-2 my-4 mx-2 bg-agayellow font-sans font-semibold rounded-[10px]"
+					>
+						Register
+					</a>
+					<a
+                        href="/pros"
+                        class="md:block hidden text-black px-4 py-2 my-4 mx-2 bg-agayellow font-sans font-semibold rounded-[10px]"
+                    >
+                        Invited Professionals
+                    </a>
+					<!-- <button>
+						<Image src={meatball} alt="Menu" class="md:hidden h-10 w-10" />
+					</button> -->
+				</div>
+			</nav>
+		</header>
+
+		<main class="bg-white">
+			<slot />
+		</main>
+
+		<footer>
+			<!-- Footer content here -->
+		</footer>
+
+		<!-- this one is for the gocongress.org domain -->
+		<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "719429d32ef34cdd8f6dc6e25b29f1da"}'></script><!-- End Cloudflare Web Analytics -->
+	</body>
+</html>
