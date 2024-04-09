@@ -2,8 +2,8 @@
 title: "Registration hits 300!"
 author: "Stew"
 date: 2024-04-09
-tags: ["post", "introduction", "registration"]
-excerpt: "With Early-Bird deadline fast approaching (April 15) the 40th Annual US Go Congress reaches 300 registrants over a month earlier than the average timeline from past Congresses."
+tags: ["post", "introduction", "registration", "swag", "excursions"]
+excerpt: "Blog Post: With Early-Bird deadline fast approaching (April 15) the 40th Annual US Go Congress celebrates reaching 300 registrants over a month earlier than projected timelines.  \ And - Get the low-down from Co-Director Stew Towle on some swag and excursion updates they are particularly excited about."
 ---
 
 # Registration hits 300!
