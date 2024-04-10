@@ -9,7 +9,7 @@ excerpt: "Blog Post: With Early-Bird deadline fast approaching (April 15) the 40
 # Registration hits 300!
 
 Our intrepid alliance of AGA old-timers and Portland Go Club up-and-comers has been toiling dilligently forward on preparations for the 40th Annual US Go Congress.  We are excited to have hit 300 registrants as of April 8, which puts us about two weeks earlier for hitting this mark than any other year for which there is data, and over a month ahead of the average for the last 20 years.  We are using this mark as a chance to celebrate the hard work and countless volunteer hours put into this year already, and to keep ourselves excited for all the work left to come.
-![Graph of Registration Numbers](../../images/PastedGraphic-38.tiff)
+![Graph of Registration Numbers](../../images/Reg_chart.webp)
 
 For those who don't know, I'm Stew, a Portland Go Player and Co-Director of this year's Congress. I want to take this chance to remind everyone that we are working to make Congress more affordable and registering before April 15 will get you in for $100 cheaper than the standard rate last year, and save you $50 off the regular price for this year. I also want to take this opportunity to talk about some of the excitement happening in the planning process, and give a rundown of some hot tips for navigating Registration this year.
 
