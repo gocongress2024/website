@@ -1,0 +1,241 @@
+:root {
+--color1:#014a7d;
+--color2:#011b36;
+--sitefont:Red Hat Text, sans-serif;
+}
+.admin-table th,
+.manager-table th {
+background-color:var(--color1) !important;
+}
+.layout-wrapper {
+width:100% !important;
+max-width:80rem !important;
+}
+
+@media (min-width : 1824px) {
+/* Styles */
+.layout-wrapper {
+width:100% !important;
+max-width:100rem !important;
+}
+}
+
+.top-link {
+color:#FFF;
+font-family:var(--sitefont);
+font-size:16px;
+margin-left:20px;
+text-decoration:none;
+}
+.top-container {
+border-bottom:1px solid #cdcdcd;
+}
+
+#twentyfive_seventyfive-310948843 .threequarter {
+  align-items: center;
+  display: flex;
+  justify-content: right;
+}
+ul.site-menu li span a, ul.site-menu li span span {
+text-transform:none !important;
+}
+h1,h2,h3 {
+font-family:var(--sitefont) !important;
+}
+a.ce-button {
+font-size:16px;
+border:none;
+}
+footer {
+background-color:var(--color1);
+}
+.footer-container, .footer-container a, .footer-container span {
+font-family:var(--sitefont);
+}
+#four_column-1809069382 {
+padding-top:30px;
+padding-bottom:50px;
+}
+#four_column-1809069382 a {
+display:block;
+text-decoration:none;
+color:#000;
+line-height:24px;
+}
+#four_column-1809069382 a.ce-button {
+display:inline-block;
+line-height:normal;
+margin-top:10px;
+color:#FFF;
+}
+.bottom-container h3 {
+font-size:18px;
+}
+
+#four_column-1809069382 a:hover {
+text-decoration:underline;
+}
+#four_column-1809069382 a.ce-button:hover {
+text-decoration:none;
+}
+.sicons a {
+vertical-align:middle;
+margin-right:10px;
+display:inline-block;
+margin-top:10px;
+transition:all .5s ease;
+}
+.sicons a:hover {
+opacity:.6;
+}
+footer {
+display:none;
+}
+
+@media (max-width :767px){
+/* Styles */
+.top-container .threequarter,
+.top-container .quarter,
+.top-container .full {
+text-align:center !important;
+justify-content: center !important;
+}
+#full_width-494336820 .full {
+text-align:right !important;
+justify-content:right !important;
+}
+ul.site-menu li {
+margin-left:0px !important;
+}
+ul.site-menu ul.sub-menu li span a {
+padding-left:0px !Important;
+}
+.bottom-container {
+text-align:center;
+}
+}
+
+.ue-month,
+.ue-datetime,
+.ue-link,
+.ue-desc {
+font-family:var(--sitefont);
+}
+.ue .ue-desc {
+font-size:15px;
+}
+.ue .ue-link a {
+font-size:18px;
+}
+.ue-day {
+font-size:24px;
+line-height:24px;
+}
+.widget-card .card-title, .widget-card .card-category, .widget-card .card-author, .widget-card .card-date, .widget-card .card-text {
+font-family:var(--sitefont);
+}
+.widget-card .card-category {
+display:none;
+}
+.widget-card .card-author {
+font-size:15px;
+color:#959595;
+font-weight:normal;
+}
+.widget-card .card-date { font-size:16px; color:#000;
+}
+.widget-card .card-title {
+font-size:18px;
+}
+.ce-widget .widget-wrap {
+padding:10px;
+}
+.widget-card.news-card {
+border: none;
+padding: 20px;
+box-sizing: border-box;
+box-shadow: 0px 0px 8px rgba(0,0,0,.35);
+width:30%;
+margin-right:30px;
+}
+.widget-card a.card-link.ce-button {
+background-color:transparent;
+color:var(--color1);
+text-align:left;
+padding-left:10px;
+}
+.tribox .inner-column {
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+.tribox a.ce-button {
+align-self:flex-start;
+}
+.tribox h3 {
+margin-bottom:0px !important;
+} 
+ul.site-menu li.sub-parent:hover ul {
+left:initial !important;
+right:0px !important;
+}
+@media (min-width : 1100px) and (max-width:1440px) {
+/* Styles */
+.layout-wrapper{
+padding-left:30px;
+padding-right:30px;
+box-sizing:border-box;
+}
+}
+
+@media (max-width :767px){
+/* Styles */
+.widget-card.news-card {
+  margin-left: 0px;
+  width: 100%;
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+}
+ul.site-menu li.sub-parent:hover ul {
+left:initial !important;
+right:initial !important;
+}
+}
+.cat-notice.alert.alert-info {
+margin-left:-5px;
+font-size:16px;
+}
+
+#add_me_container .form-row label {
+	width: 100%;
+	padding: 0px;
+	font-size: 16px;
+
+	font-weight: normal;
+	text-align: left;
+}
+
+#add_me_container .form-row input,
+#add_me_container .form-row select {
+	clear: left;
+	margin: 0px;
+	font-size: 16px;
+}
+#add_me_container .form-row .category-container label {
+margin-left:5px;
+}
+
+element.style {
+}
+#add_me_container .form-row label {
+    hide;
+    width: 100%;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+}
+.add-me-subgroup {
+display:none;
+}</pre></body></html>
