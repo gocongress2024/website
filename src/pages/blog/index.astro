@@ -1,0 +1,31 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import { getCollection } from "astro:content"
+import { compareDesc } from "date-fns"
+
+const blogEntries = await getCollection("blog").then((entries) =>
+  entries.sort((a, b) =>
+    compareDesc(new Date(a.data.date), new Date(b.data.date)),
+  ),
+)
+---
+
+<Layout title="blog">
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold text-gray-800 mb-6">Blog</h1>
+    <ul class="list-none">
+      {
+        blogEntries.map((entry) => (
+          <li class="mb-4">
+            <a
+              href={entry.slug}
+              class="text-2xl text-blue-600 hover:text-blue-800 font-semibold"
+            >
+              {entry.data.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>

@@ -1,0 +1,408 @@
+---
+import Layout from "../layouts/Layout.astro"
+import HomePageTabs from "../components/HomePageTabs.astro"
+import Slideshow from "../components/Slideshow.astro"
+import MapComponent from "../components/Map.astro"
+import { getCollection } from "astro:content"
+import { getImage, Image } from "astro:assets"
+import { compareDesc } from "date-fns"
+import WhatToExpectContent from "../data/eventTabs.json"
+
+const blogEntries = await getCollection("blog").then((entries) =>
+	entries.sort((a, b) =>
+		compareDesc(new Date(a.data.date), new Date(b.data.date)),
+	),
+)
+const latestEntry = blogEntries[0]
+
+import roseAndBoard from "../images/roseandboard.png"
+import lightRail from "../images/lightrail.png"
+const optimizedRoseAndBoard = await getImage({ src: roseAndBoard })
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	"/src/images/photos/*.{jpg,jpeg,png}",
+)
+
+const whatToExpectWithOpimizedImages = await Promise.all(
+	WhatToExpectContent.map(async (event) => ({
+		...event,
+		image: images[event.image]
+			? await getImage({ src: images[event.image](), width: 600 })
+			: undefined,
+	})),
+)
+
+const basePath = "/"
+---
+
+<Layout title="US Go Congress 2024">
+	<style>
+		a { text-decoration: underline; font-weight: bold; }
+		ol { list-style-type: decimal; margin-left: 2em; }
+		.ml-4 { margin-left: 0; }
+	</style>
+	<div class="bg-agablue">
+		<div class="relative">
+			<div
+				style={`background-image: url('${optimizedRoseAndBoard.src}');`}
+				class="relative bg-cover bg-right sm:py-8 lg:py-16 py-[20px]"
+			>
+				<!-- Positioning and styling for the overlay -->
+				<div
+					class="flex-col items-center gap-[10px] mx-[20px] bg-white/90 p-4 max-w-xl rounded-[25px]"
+				>
+					<style>
+						h1 { margin-bottom: 0em; margin-top: 0em; }
+						h2 { margin-bottom: 0em; margin-top: 0.5em; text-align: center }
+						p { margin-bottom: 0.5em }
+						a { margin-left: auto; margin-right: auto; }
+					</style>
+					<h1
+						class="leading-tight text-center text-[36px] font-bold font-open-sans"
+					>
+						US Go Congress 2024
+					</h1>
+					<h2 class="text-xl md:text-3xl font-open-sans">July 13-21</h2>
+					<p class="font-sans">
+						Registration for the 40th annual US Go Congress is now open! Book now before rates increase on June 15th!
+					</p>
+					<a href={`/registration`}
+						><button class="px-4 py-2 bg-agagreen text-white rounded-[10px]"
+							>Register Now!</button
+						></a
+					>
+				</div>
+			</div>
+		</div>
+		<section class="mb-4 mx-4 text-white">
+			<h2 class="text-[48px] font-open-sans font-bold mb-2">
+				News
+			</h2>
+			<h2 class="text-[30px] font-sans mb-4" text-align="center">
+				<div><em><u>June 15 Deadline for Regular Registration!</u></em></div> <br/>(Registering after June 15 will result in late registration fees being applied.  Please register ASAP to help us ensure we can plan accordingly for the number of attendees)<br/>
+			</h2>
+			<div class="flex flex-col md:flex-row gap-8">
+				<div class="w-full md:w-1/2">
+					<iframe
+						class="w-full aspect-video"
+						src="https://www.youtube.com/embed/0zKT6UBexOc?si=wRLJkdvkp7smoe1m"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen></iframe>
+				</div>
+				<div class="w-full md:w-1/2">
+					<a href={`/blog/${latestEntry.slug}`}
+						><h3 class="text-[36px] font-semibold font-open-sans">
+							{latestEntry.data.title}
+						</h3></a
+					>
+					<h5 class="font-sans text-[20px] font-semibold ml-[20px] mb-[20px]">
+						by {latestEntry.data.author}
+					</h5>
+					<div class="font-sans">
+						<p>{latestEntry.data.excerpt}</p>
+					</div>
+					<a class="font-bold" href={`/blog/${latestEntry.slug}`}
+						>Read more</a
+					>
+				</div>
+			</div>
+		</section>
+		<section class="mx-4 mb-48">
+			<h3 class="font-open-sans font-bold text-[48px] text-white">
+				What to Expect
+			</h3>
+			<div class="ml-4 font-sans text-white text-[20px] mb-8">
+				There are a variety of events that are held every year at Congress, from
+				tournaments to pro lectures to excursions and community events. Some of
+				these are different from year to year depending on the location, so
+				here’s an idea of what we have planned so far for this year’s Congress.
+			</div>
+			{
+				whatToExpectWithOpimizedImages.map((event) => (
+					<div class="ml-4">
+						<h4 class="font-open-sans font-bold text-[32px] text-white">
+							{event.title}
+						</h4>
+						<div class="flex flex-col md:flex-row gap-12 justify-between ml-4">
+							<div class="font-sans text-[20px] text-white">
+								{event.description}
+							</div>
+							<img class="w-full md:w-[200px]" src={event.image?.src} />
+						</div>
+					</div>
+				))
+			}
+		</section>
+		<section class="mx-8">
+			<h2
+				class="font-open-sans text-center mb-8 w-full font-bold text-[40px] md:text-[48px] text-white"
+			>Why Portland</h2>
+			<div class="font-sans text-[20px] text-white">
+				Portland, OR is a gorgeous, walkable city! We have lots of delicious food, and a wonderful venue at Portland State University. From the Japanese Garden and International Rose Garden to Powells City of Books, there are plenty of attractions to keep you busy when you're not enjoying a week of amazing Go games and lectures!
+			</div>
+		</section>
+		<Slideshow />
+		<section class="mx-8">
+			<style>
+				h2 { margin-bottom: 0; margin-top: 2em; }
+			</style>
+			<h2
+				class="font-open-sans text-center mb-8 w-full font-bold text-[40px] md:text-[48px] text-white"
+			>
+				Costs
+			</h2>
+
+			<div class="font-sans text-[20px] text-white">
+				<style>
+					table {     margin-left:auto; margin-right:auto; }
+					tr td:first-child { font-weight: bold; }
+					tr td:last-child { text-align: right }
+					strike { color: #777; font-size: 70% }
+				</style>
+
+				<table>
+                    <tr>
+                        <td>Adult Member</td>
+                        <td> $450</td>
+                        <td>  ($60 per day)</td>
+                    </tr>
+                    <tr>
+                        <td>Youth (Age 22 or lower)</td>
+                        <td> $225</td>
+                        <td>  ($30 per day)</td>
+                    </tr>
+                    <tr>
+                        <td>Non-participant</td>
+                        <td> $110</td>
+                        <td>  ($15 per day)</td>
+                    </tr>
+                </table>
+                <p>
+                For people registering for less than the complete time: When registering for congress, choose “pay later” then email registrar@gocongress.com with the amount of days you want. It is a 2 day minimum for per day pricing.
+                </p>
+			</div>
+
+
+			<div class="font-sans text-[20px] text-white">
+				<style>
+					h3 { margin-bottom: 0; margin-top: 2em; }
+					p { margin-top: 1em; }
+				</style>
+				<h3 class="font-open-sans text-center mb-8 w-full font-bold text-[30px] md:text-[36px] text-white">Youth Scholarships</h3>
+				<p>To help offset the cost for young people attending the Congress, the <a href="http://agfgo.org/">American Go Foundation</a> (AGF) provides scholarship funding.</p>
+
+				<p>Youth who played in any of the main online events (Redmond Cup, North American Kyu Championship, AGA Girls Cup) can apply for a $200 Tournament Scholarship.</p>
+
+				<p>Youth may also apply for a separate $300 by writing an essay, for a total of $500 per person.  There are 20 scholarships allotted for the US, with 5 more for Canada and Mexico.  All scholarships are first-come first-serve.</p>
+				
+				<p>Apply for either or both scholarships by filling out an application for youth scholarships.</p>
+
+				<h3 class="font-open-sans text-center mb-8 w-full font-bold text-[30px] md:text-[36px] text-white">College-Age Scholarships</h3>
+
+				<p>Participants must be 26 or younger and actively enrolled in college.  Graduate and undergraduate students are both eligible for a $200 scholarship. All scholarships are first-come first-serve, with 20 allotted for the US and 5 allotted to be split between Canada and Mexico.</p>
+
+				<p><a href="https://agfgo.bubbleapps.io/version-test">Apply for College-Age Scholarship</a>  <b>Note:</b> choose the College option from the top menu to pull up the correct form.</p>
+			</div>
+		</h2>
+		<section class="mx-8">
+			<h2
+				class="font-open-sans text-center mb-8 w-full font-bold text-[40px] md:text-[48px] text-white"
+			>
+				Housing and Transportation
+			</h2>
+			<div class="flex flex-col md:flex-row w-full gap-6 h-[640px]">
+				<MapComponent class="w-full md:w-1/2 aspect-square" />
+				<div class="w-full md:w-1/2 h-auto">
+					<h3
+						class="font-open-sans mb-8 font-semibold text-[40px] text-white text-center"
+					>
+						Housing Options
+					</h3>
+					<div class="font-sans text-[20px] text-white">
+						<p>The 2024 US Go Congress has partnered with Portland State University
+						and several nearby hotels to offer a variety of housing options
+						within convienient walking distance of the Go Congress venue.</p>
+
+						<ol>
+							<li>University Place Hotel. An affordable hotel offering private rooms on a budget. Call 1-(866)-845-4647 and tell them you're with the American Go Congress!</li>
+							<li><s>Hotel Zags. Upscale accommodations, offering suites and rooms.</s> Fully booked!</li>
+							<li><s>Hotel Vance. Chic, modern hotel offering standard rooms.</s> Fully booked!</li>
+							<li><s>Ondine Hall & Broadway Hall. Low-cost dormitory accommodations.</s> Fully booked!</li>
+						</ol>
+
+						<p>More details are available on our <a href="registration/housing">housing page.</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="flex flex-col md:flex-row w-full gap-6">
+				<div class="w-full h-auto">
+					<h3
+						class="font-open-sans mb-8 font-semibold text-[40px] text-white text-center"
+					>
+						Transportation
+					</h3>
+					<div class="font-sans text-[20px] text-white">
+						It is not necessary to rent a car or take a taxi to get to the Go
+						Congress! For just $2.90, you can take the MAX Light Rail system
+						from the airport directly to the Portland State University campus.
+					</div>
+				</div>
+				<div class="w-full h-auto">
+					<Image src={lightRail} alt="Light Rail" />
+				</div>
+			</div>
+		</section>
+		<div class="font-open-sans text-[48px] text-white mt-12 mx-[20px]">
+			Frequently Asked Questions
+		</div>
+		<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			How strong a player do I need to be to come?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">Players of all skill levels are welcome! The Go Congress has historically attracted a range of skill levels from brand new inexperienced people learning to play Go for the first time, all the way up to professionals and high-level amateurs. People of all levels will have plenty of opportunities to play, learn and share in the joy of Go.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			I don't really have any friends who'd want to go!
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">That's OK! The Go Congress is a very welcoming and social atmosphere where people make new friendships all the time.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			I want to do more than just play Go all week!
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">No problem! There's tons to do in the Portland area. We have planned excursions if you would like an organized trip, and there's plenty of opportunity to go off on your own or with friends.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			What time should I arrive and leave?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">Most people will arrive on Saturday morning or afternoon, July 13, and leave on Sunday morning, July 21, after breakfast.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			Time Zone
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">Portland, OR is on US Pacific Daylight Time. (PDT, UTC-7)</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			Is there cell phone service?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">Yes! Portland State University is located in the middle of Downtown, and has excellent cell coverage from all major carriers.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			Is there wireless internet access?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">Yes! Free wifi is available at the Smith Memorial Student Union, where the Go Congress is held.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			Can I get a meal plan?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">Yes! You can get a prepaid meal plan that will give you access to University cafeteria food for some or all of your meals. Meals cost $10.25 for Breakfast, $11.55 for Lunch, and $13.65 for Dinner. If you're staying the dorms, you can prepay for meals in advance. You can also pay for meals at the door, whether you are staying in the dorms or not.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			Can I eat other places besides the University?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">Yes! There are many restaurants and food carts nearby the campus. On Saturday mornings, you can also enjoy fresh food from the Portland Farmer's Market, which is located right outside the Smith Memorial Student Union where the Congress is held.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			Can I attend Congress for part of the week?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">Yes! For people registering for less than the complete time, when registering for congress, choose “pay later” then email registrar@gocongress.com with the amount of days you want. It is a 2 day minimum for per day pricing.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			What is the weather like?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">Weather in the summer tends to be sunny and warm. We do occasionally still see some light rain in July. Summer winds tend to be gentle, and our humidity is fairly low, and never muggy! Temperatures typically see highs of about 80°F - 85°F in the daytime, and lows of about 55°F - 60°F. In Celsius, those are highs of about 26°C - 30°C, and lows of about 12°C - 16°C. Sunrise will be a little after 5:30am, with sunset coming just before 9:00pm.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			How do I change my reservation?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">Due to a limitation of our new software, editing registrations after submission is not possible by registrants. Please <a href="mailto:registrar@gocongress.org">contact the Registrar directly</a> at registrar@gocongress.org.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			I don't have a credit card. How can I make a payment?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">A credit card is preferred, since it’s the only way to automatically record payment to your Congress account, but we do accept PayPal and personal checks. For details about paying by PayPal or personal check, please <a href="mailto:registrar@gocongress.org">contact the Registrar directly</a> at registrar@gocongress.org. Also, check in with Matt about this!</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			What is the refund / cancellation policy?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">You can cancel your registration any time before the Congress! There is a cancellation fee of $25 per registration for cancellations before June 1st. After June 1st, the cancellation fee will be $50.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			What if I’m not currently an AGA member?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">To register as part of the Congress, you must be a current member of the American Go Association. If you are not a member, sign up by clicking Join the AGA.  If your membership has lapsed, Sign In to your account and renew your membership.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			Do I have to register if I am not playing or going to lectures?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">Anyone who uses the Congress for rooms, meals, or discounts must be registered at Congress. We recognize that there may be family members that will not be interested in participating in Go events, like tournaments and lectures from Professional Go Teachers. For these we have the much-reduced registration fee for Non-Participants of $100 for the week. Non-Participants also get a t-shirt and other congress gifts. The guardian of under-age youth participants must be registered at the Congress.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			What is the youth policy?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">Each youth (age 17 and younger) must have a designated adult on-site who is also a registered attendee at the Congress and agrees to watch over the youth and be responsible for their behavior. This adult will either be a Legal Guardian (parent or otherwise), or someone assigned to be the “Attending Guardian” at the Congress. The Legal Guardian must fill out and sign one of the agreement forms on the Youth Participants page, and submit it before or during Congress registration. If an Attending Guardian is used, that adult must also sign the form to acknowledge responsibility.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			What should I put for my rank?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">In most cases you should use your current AGA rating. During registration, leave the field set to "Use AGA rating." If you think you have a significantly different rank, enter the rank and an explanation (and prepare to be challenged by the Tournament Coordinator on check-in day :-) ). If you don't have an AGA rating, but do have one from a different organization please consult Sensei's Library for guidance. The Tournament Coordinator will have the final say.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			What about alcohol, tobacco, etc?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">Smoking is not permitted anywhere on campus, nor are vaping, incense, candles, or other combustibles. The dorm rooms have smoke detectors. The use of marijuana and other controlled substances are not allowed anywhere on campus. Although marijuana is legal for recreational use in the State of Oregon, it is unlawful to consume marijuana in public places. Alcohol is not permitted at the Go Congress itself, though drinking is allowed in the privacy of rented dorm rooms as long as no minors are present. We will have catered beer and wine available at the awards ceremony. Also, there are many places within walking distance of campus where you can enjoy what you wish. :)
+			</div>
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			What about bringing pets?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">No pets are allowed, with the exception of service animals.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			What about people with disabilities?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">The Smith Memorial Student Union is equipped with ramps and elevators. The PSU dormitories have ADA dorm rooms available. For hotel options, please check with the specific hotel about availability of needed accommodations.</div>
+			</div>
+			<div class="mx-[40px]">
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			What if I have an emergency?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white">If there is a health emergency, contact any PSU or Go Congress staff member immediately to get help, or call 911.</div>
+			<div class="font-open-sans text-[20px] ml-4 font-semibold text-white mt-12">
+			Will the Congress be requiring masks or other COVID measures?
+			</div>
+			<div class="font-sans text-[20px] ml-4 text-white"> Please see the <a href={`/covid/`}> Covid Policy</a>. </div>
+		<div
+			class="mt-28 mb-8 text-white text-center text-[24px] md:text-[48px] font-open-sans"
+		>
+			So what are you waiting for?
+		</div>
+		<div class="flex justify-center w-full mb-20">
+			<a
+				href={`/registration/`}
+				class="py-[23px] mx-auto px-[98px] rounded-[50px] bg-agagreen text-white font-open-sans text-[24px] md:text-[48px]"
+				style="text-decoration: none"
+				>Register Now</a
+			>
+		</div>
+	</div>
+</Layout>

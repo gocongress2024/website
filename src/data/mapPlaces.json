@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Smith Memorial Student Union (Go Congress)",
+    "address": "1825 SW Broadway, Portland, OR 97201",
+    "lat": 45.511828,
+    "lng": -122.684273
+  },
+  {
+    "name": "Hotel Vance",
+    "address": "1455 SW Broadway, Portland, OR 97201",
+    "lat": 45.514542,
+    "lng": -122.682610
+  },
+  {
+    "name": "Hotel Zags",
+    "address": "515 SW Clay St, Portland, OR 97201",
+    "lat": 45.513962,
+    "lng": -122.680763
+  },
+  {
+    "name": "University Place Hotel",
+    "address": "310 SW Lincoln St, Portland, OR 97201",
+    "lat": 45.507087,
+    "lng": -122.6803752
+  },
+  {
+    "name": "Ondine Hall Dormitory",
+    "address": "1912 SW 6th Ave, Portland, OR 97201",
+    "lat": 45.5100817,
+    "lng": -122.6831369
+  },
+  {
+    "name": "Broadway Hall Dormitory",
+    "address": "625 SW Jackson St, Portland, OR 97201",
+    "lat": 45.509361,
+    "lng": -122.684868
+  }
+]

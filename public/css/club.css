@@ -1,0 +1,90 @@
+h1 {
+	color:#000000;
+	font-family:'Red Hat Text',sans-serif;
+	font-size:30px;
+}
+h2 { 
+	color:#000000;
+	font-family:'Red Hat Text',sans-serif;
+	font-weight:bold;
+}
+h3 { 
+	color:#000000;
+	font-family:'Red Hat Text',sans-serif;
+	font-size:22px;
+}
+a { 
+	color:#014a7d;
+	font-size:16px;
+	font-family:'Red Hat Text',sans-serif;
+}
+body { 
+	font-size:16px;
+	font-family:'Red Hat Text',sans-serif;
+	background-color:#FFFFFF;
+}
+.top-container { 
+	background-color:#FFFFFF;
+}
+.user-panel .control-panel-link { 
+	color:#ffffff;
+	font-size:16px;
+	font-family:'Red Hat Text',sans-serif;
+}
+.user-panel .login-link { 
+	color:#ffffff;
+	font-size:16px;
+	font-family:'Red Hat Text',sans-serif;
+}
+.layout-widget #user_panel_widget .panel-checklist-link { 
+	color:#FFF;
+}
+.panel-welcome-message { 
+	color:#ffffff;
+	font-size:16px;
+	font-family:'Red Hat Text',sans-serif;
+}
+.favorites-hover { 
+	color:#ffffff;
+	font-size:16px;
+	font-family:'Red Hat Text',sans-serif;
+}
+.material-icons.favorite-icon { 
+	color:#ffffff;
+}
+#layout_wrapper { 
+	max-width:initial;
+}
+a.ce-button { 
+	color:#ffffff;
+	font-size:14px;
+	background-color:#014a7d;
+	border-radius:0px;
+	border-width:2px;
+	border-color:#ffffff;
+	background-image:none;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-family:'Red Hat Text',sans-serif;
+}
+a.ce-button:hover { 
+	color:#ffffff;
+	background-color:#011b36;
+	border-width:2px;
+	border-color:#ffffff;
+	background-image:none;
+}
+.user-panel .login-link.ce-button { 
+	color:#ffffff;
+}
+div.instruction-text { 
+	color:#666666;
+	font-size:13px;
+	font-family:'Red Hat Text',sans-serif;
+}
+.bottom-container { 
+	color:#000000;
+	background-color:#aed0e8;
+}
