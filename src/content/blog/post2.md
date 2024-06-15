@@ -13,7 +13,7 @@ The Go Congress has chartered a bus to make a guided excursion through the sceni
 
 Note: Due to ongoing repairs by the park service from the 2017 Eagle Creek fire, we've been advised that we need to stay flexible about our exact stop since available parks may vary each day. Our first pick is Multnomah Falls, and we are attempting to get the necessary permit to get a tour group in. We may need to substitute an alternative stop, however!
 
-We only have a limited amount of space on the bus, so make sure you book your spot early by going ![here](https://usgo.org/content.aspx?page_id=4002&club_id=454497&item_id=2322805)!
+We only have a limited amount of space on the bus, so make sure you book your spot early by going [here](https://usgo.org/content.aspx?page_id=4002&club_id=454497&item_id=2322805)!
 
 More info:
 
