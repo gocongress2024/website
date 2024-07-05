@@ -23,7 +23,7 @@ The banquet doors open at 5:30pm on Saturday (7/20) in the main ballroom.  Meal 
 
 ## **Song and Poetry Contest**
 > ### Contest Submission
-- Entries for the Bob High Memorial Song and Poetry Contest can be [Submitted Here](https://www.usgo.org/content.aspx?page_id=1478&club_id=454497&item_id=10434&actr=x&actr=3)
+- Entries for the Bob High Memorial Song and Poetry Contest can be <a href="https://www.usgo.org/content.aspx?page_id=1478&club_id=454497&item_id=10434&actr=x&actr=3" target="_blank">Submitted Here</a>
 
 > ### Timeline
 - Contest Opens: 12 pm EDT on Monday, July 8
@@ -41,7 +41,7 @@ The banquet doors open at 5:30pm on Saturday (7/20) in the main ballroom.  Meal 
   7. The contest is open to all current AGA members, and members of their immediate family.  (Spouse, Children, grandchildren, parents, and grandparents.)  The contest is also open to all participants in the Go Congress and their immediate family.
   8. The judges will select the finalists. An online vote will determine the winners. Any performance attachment will not be viewed by the judges nor shown as part of the online vote.
 
-## Identification of Pieces
+> ### Identification of Pieces
 Because judges will view your piece as an anonymous entry, it is important that you do two things:
 1. DO NOT INCLUDE any identifying information in the
     - Title of your entry
