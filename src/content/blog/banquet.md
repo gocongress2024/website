@@ -23,7 +23,7 @@ The banquet doors open at 5:30pm on Saturday (7/20) in the main ballroom.  Meal 
 
 ## **Song and Poetry Contest**
 > ### Contest Submission
-- Entries for the Bob High Memorial Song and Poetry Contest can be <a href="https://www.usgo.org/content.aspx?page_id=1478&club_id=454497&item_id=10434&actr=x&actr=3" target="_blank">Submitted Here</a>
+- Entries for the Bob High Memorial Song and Poetry Contest can be <a href="https://www.usgo.org/content.aspx?page_id=1478&club_id=454497&item_id=10437" target="_blank">Submitted Here</a>
 
 > ### Timeline
 - Contest Opens: 12 pm EDT on Monday, July 8
