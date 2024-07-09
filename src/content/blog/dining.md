@@ -8,9 +8,13 @@ excerpt: "Blog Post: There have been some last second changes to the dining situ
 
 # Where to EAT!
 
-Bellow is a list of a bunch of local dining options.  SMSU is the building where all Congress events take place.  Broadway Residence Hall is a few blocks South of SMSU and the options listed as near to it will also be within blocks of your accomodations for folks staying at University Place Hotel or in the Dorms.  We are also in talks with PSU that hopefully will result in more options opening up inside SMSU and an increase in the hours that those places are available.
+Bellow is a pdf with a list of many convenient local dining options.  SMSU is the building where all Congress events take place.  Broadway Residence Hall is a few blocks South of SMSU and the options listed as near to it will also be within blocks of your accomodations for folks staying at University Place Hotel or in the Dorms.  We are also in talks with PSU that hopefully will result in more options opening up inside SMSU and an increase in the hours that those places are available.
 
-[![Dining Guide](/SMSUFoodGuide.pdf)](/SMSUFoodGuide.pdf)
+<object data="http://gocongress.org/SMSUFoodGuide.pdf" type="application/pdf" width="500px" height="700px">
+    <embed src="http://gocongress.org/SMSUFoodGuide.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://gocongress.org/SMSUFoodGuide.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 
 ## Update about the Change to the Dining Situation 
 
