@@ -8,6 +8,8 @@ excerpt: "Blog Post: There have been some last second changes to the dining situ
 
 # Where to EAT!
 
+Bellow is a list of a bunch of local dining options.  SMSU is the building where all Congress events take place.  Broadway Residence Hall is a few blocks South of SMSU and the options listed as near to it will also be within blocks of your accomodations for folks staying at University Place Hotel or in the Dorms.  We are also in talks with PSU that hopefully will result in more options opening up inside SMSU and an increase in the hours that those places are available.
+
 [![Dining Guide](/SMSUFoodGuide.pdf)](/SMSUFoodGuide.pdf)
 
 ## Update about the Change to the Dining Situation 
