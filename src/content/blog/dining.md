@@ -18,7 +18,7 @@ Bellow is a list of many convenient local dining options.  SMSU is the building 
   - Standard convenience store market with prepackaged snacks and utility items
 - [Bowery Bagels](https://www.bowerybagels.com/) — 8 a.m. to 3 p.m. M-F
   - Bagels and Breakfast/Deli sandwiches. Coffee available as well!
-- [Smith's Kitchen food court](https://dineoncampus.com/psu) — 8 a.m. to 3 p.m. M-F
+- [Smith's Kitchen food court](https://dineoncampus.com/psu) — 8 a.m. to 3 p.m. Every Day
 
 ○ Grab-n-go and snacks only, food counters will be closed
 
