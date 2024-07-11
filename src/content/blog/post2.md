@@ -78,3 +78,10 @@ https://skwatercraftrentals.com/
 https://www.portlandelectricboatco.com/
 https://yacht-tubs.com
 https://willamettejet.com/
+
+## Portland Art Museum
+The beautiful Portland Art Museum is located within walking distance of the PSU campus. Although the museum is undergoing an extensive upgrade and renovation which has closed off most of the permanent exhibits and added some construction noise, there will be some exhibits open during the Congress including: Pissarro to Picasso: Masterworks on Loan from the Kirkland Family Collection, Monet to Matisee: French Moderns, and Future Now: Virtual Sneakers to Cutting-Edge Kicks.
+
+https://portlandartmuseum.org/
+
+![Art Museum](../../images/artmuseum.jpg)
