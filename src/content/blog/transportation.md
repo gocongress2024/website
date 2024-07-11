@@ -44,6 +44,13 @@ Next, select “Pay to Park” and all day $14 rate. The all day rate must be se
 Displaying your receipt is not necessary as long as your license plate was entered correctly.
 
 ## Local Transit
-
+### Trimet
 Portland State University (the Congress venue) is centrally located in Portland's Downtown area.  This means there is easy access to the Trimet public transit system.  We strongly encourage using trimet.org and the Trimet Trip Planner app while you are here.  You can also download the Hop Fastpass app in order to load money digitally and use your phone to pay fares. The MAX Train and Streetcar lines both run through PSU's campus and get you quickly and easily to a number of local hotspots.  The Streetcar does a loop path around downtown so it is also a fun ride for seeing the city and a great way to get to shopping and dining areas like the Pearl District and NW 23rd Ave.
+### Scooters and Bikes
+- Biketown!  Portland is famous for being bicycle friendly, and throughout the city there ar kiosks for grab and go bike rentals.  Download the Biketown App to find and use these bicycles.  You can get around on bicycle and there are lots of fun rides to take.
+- Scooters: There are two main apps you can use to find and rent electric scooters for getting around.  They are called Lime and Spin.  You can see scooters sitting around throughout the city, or use the apps to find one nearest to you.
+### Walking
+Portland is great place to get around on foot.  It can often be nice to take the Streetcar, Max or Bus to get into an interesting area, and then just walk around. 
 
+## The Shape of the City
+Portland is on a loose grid, and understanding the shape of the city can make it much easier to get around and explore.  The Willamette river divides East Portland and West Portland (so it runs loosely South to North).  Go Congress and PSU are in an area called "Inner South West".  The North and South side of the city are divided by Burnside Street.  The numbered streets in Portland all run parallel to the river, so as you go down in numbers on either side of the river you are getting closer to the river.  In Northwest Portland the streets go in alphabetical order North from Burnside (so the next street North of Burnside is Couch, then Davis, then Everett), so this can be helpful in that quadrant.  Alas Southwest (where Congress takes place) is not alphabetical, but you can use the numbers to get your baring.  Broadway, which is the road Congress is on, is equivalent to West 7th Street.
