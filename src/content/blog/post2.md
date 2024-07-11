@@ -84,4 +84,4 @@ The beautiful Portland Art Museum is located within walking distance of the PSU 
 
 https://portlandartmuseum.org/
 
-![Art Museum](../../images/artmuseum.jpg)
+![Art Museum](../../images/artmusem.jpg)
