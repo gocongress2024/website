@@ -27,7 +27,7 @@ The banquet doors open at 5:30pm on Saturday (7/20) in the main ballroom.  Meal 
 
 > ### Timeline
 - Contest Opens: 12 pm EDT on Monday, July 8
-- Contest Closes: 11pm EDT on Monday, July 18
+- Contest Closes: 11pm EDT on Thursday, July 18
 - Voting on Finalists Opens: 12pm EDT on Thursday, July 18
 - Voting on Finalists Closes: 12pm EDT on Saturday, July 20
 
