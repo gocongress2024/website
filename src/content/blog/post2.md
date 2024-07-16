@@ -8,22 +8,7 @@ excerpt: "Blog Post: As the June 15 regular registration deadline approaches - i
 
 # Wednesday Off-Day Excursions!!!
 
-## Columbia Gorge Excursion
-The Go Congress has chartered a bus to make a guided excursion through the scenic Columbia Gorge. This excursion leaves on our off day (Wednesday) and stops for some photography and hike opportunities, followed by a drive along the Columbia river, a stop for lunch in Carson, followed by a visit to the Bonneville Dam and Fish Hatchery. The price is $49 per person. We have a planned lunch stop at the Backwoods Brewing Company in Carson -- please bring money for lunch!
-
-Note: Due to ongoing repairs by the park service from the 2017 Eagle Creek fire, we've been advised that we need to stay flexible about our exact stop since available parks may vary each day. Our first pick is Multnomah Falls, and we are attempting to get the necessary permit to get a tour group in. We may need to substitute an alternative stop, however!
-
-We only have a limited amount of space on the bus, so make sure you book your spot early by going [here](https://usgo.org/content.aspx?page_id=4002&club_id=454497&item_id=2322805)!
-
-More info:
-
-https://www.multnomahfallslodge.com/
-https://www.travelportland.com/region/multnomah-falls/
-https://www.backwoodsbrewingcompany.com/
-https://myodfw.com/bonneville-hatchery-visitors-guide
-
-![Bonneville Dam](https://upload.wikimedia.org/wikipedia/commons/a/ab/Historic_Columbia_River_Highway_-_Bonneville_Dam_on_the_Columbia_River_in_Oregon_-_NARA_-_7719216.jpg)
-![Columbia Gorge](../../images/gorge.jpg)
+All of these excursions are easily accessible via Public Transit from the venue (with the exception of the Gorge trip which is SOLD OUT).  You can use triment.org Trip Planner to find the easiest transit route to get to them, or stop by the Help Desk in the main ballroom to get instructions on how to get to any of the bellow suggestions.
 
 ## Powell's City of Books
 Within walking distance and public transit of the Go Congress is one of the most unique and largest used bookstores in the world! Powell's occupies an entire city block, and each of its nine rooms are the size of a large bookstore in their own right. This includes a rare book room, which includes various first-editions and centuries-old books, and is open to the public.
@@ -85,3 +70,21 @@ The beautiful Portland Art Museum is located within walking distance of the PSU 
 https://portlandartmuseum.org/
 
 ![Art Museum](../../images/artmusem.jpg)
+
+## Columbia Gorge Excursion
+### THIS EXCURSION IS SOLD OUT
+The Go Congress has chartered a bus to make a guided excursion through the scenic Columbia Gorge. This excursion leaves on our off day (Wednesday) and stops for some photography and hike opportunities, followed by a drive along the Columbia river, a stop for lunch in Carson, followed by a visit to the Bonneville Dam and Fish Hatchery. The price is $49 per person. We have a planned lunch stop at the Backwoods Brewing Company in Carson -- please bring money for lunch!
+
+Note: Due to ongoing repairs by the park service from the 2017 Eagle Creek fire, we've been advised that we need to stay flexible about our exact stop since available parks may vary each day. Our first pick is Multnomah Falls, and we are attempting to get the necessary permit to get a tour group in. We may need to substitute an alternative stop, however!
+
+We only have a limited amount of space on the bus, so make sure you book your spot early by going [here](https://usgo.org/content.aspx?page_id=4002&club_id=454497&item_id=2322805)!
+
+More info:
+
+https://www.multnomahfallslodge.com/
+https://www.travelportland.com/region/multnomah-falls/
+https://www.backwoodsbrewingcompany.com/
+https://myodfw.com/bonneville-hatchery-visitors-guide
+
+![Bonneville Dam](https://upload.wikimedia.org/wikipedia/commons/a/ab/Historic_Columbia_River_Highway_-_Bonneville_Dam_on_the_Columbia_River_in_Oregon_-_NARA_-_7719216.jpg)
+![Columbia Gorge](../../images/gorge.jpg)
