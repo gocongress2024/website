@@ -64,13 +64,6 @@ https://www.portlandelectricboatco.com/
 https://yacht-tubs.com
 https://willamettejet.com/
 
-## Portland Art Museum
-The beautiful Portland Art Museum is located within walking distance of the PSU campus. Although the museum is undergoing an extensive upgrade and renovation which has closed off most of the permanent exhibits and added some construction noise, there will be some exhibits open during the Congress including: Pissarro to Picasso: Masterworks on Loan from the Kirkland Family Collection, Monet to Matisee: French Moderns, and Future Now: Virtual Sneakers to Cutting-Edge Kicks.
-
-https://portlandartmuseum.org/
-
-![Art Museum](../../images/artmusem.jpg)
-
 ## Columbia Gorge Excursion
 ### THIS EXCURSION IS SOLD OUT
 The Go Congress has chartered a bus to make a guided excursion through the scenic Columbia Gorge. This excursion leaves on our off day (Wednesday) and stops for some photography and hike opportunities, followed by a drive along the Columbia river, a stop for lunch in Carson, followed by a visit to the Bonneville Dam and Fish Hatchery. The price is $49 per person. We have a planned lunch stop at the Backwoods Brewing Company in Carson -- please bring money for lunch!
